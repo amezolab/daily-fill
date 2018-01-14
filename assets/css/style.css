@@ -1,0 +1,14 @@
+.uk-card {
+  margin-right: 15px;
+}
+.wrapper {
+  /*background: url("../images/bled.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 980px;
+}
+.uk-heading-bullet{
+  color: grey;
+  text-align:right;
+  padding-bottom: 25px;
+}
