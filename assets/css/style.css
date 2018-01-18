@@ -12,3 +12,11 @@
   text-align:right;
   padding-bottom: 25px;
 }
+
+#exp{
+  -background-image: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};
