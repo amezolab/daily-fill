@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<title>Meme Slideshow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides {display:none;}
+. {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center">Automatic Slideshow</h2>
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+
+  <iframe class="mySlides" src="https://giphy.com/embed/374lMd6uFRv5C" width="480" height="250" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yoga-374lMd6uFRv5C"></a></p>
+  <iframe class="mySlides" src="https://giphy.com/embed/tLdUZKLDEPXu8" width="480" height="270" frameBorder="0"  allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
+  <iframe class="mySlides" src="https://giphy.com/embed/GrhK7BbPFteOA" width="480" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
+  <iframe class="mySlides" src="https://giphy.com/embed/YeQfzfDgcagNO" width="480" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-YeQfzfDgcagNO"></a></p>
+  <iframe class="mySlides" src="https://giphy.com/embed/lyvxPsyKMYk3m" width="480" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 9000);
+}
+</script>
