@@ -6,6 +6,8 @@
     <title>Morning Method Project 1</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- UIkit CSS cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/css/uikit.min.css" />
   </head>
@@ -19,8 +21,8 @@
       <ul class="uk-navbar-nav">
         <li>
           <a href="#">
-            <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
-            Today's Date
+            <span class="uk-icon uk-margin-small-right" uk-icon="icon: star" id="date"></span>
+            
           </a>
         </li>
       </ul>
@@ -36,10 +38,10 @@
     </div>
   </nav> <!-- closes navbar -->
 
-  <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade">
-    <ul class="uk-slideshow-items">
-      <li>
-        <img src="" alt="" uk-cover>
+<!--   <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade">
+    <ul class="uk-slideshow-items"> -->
+<!--       <li>
+        <img src="" alt="" uk-cover> -->
         <div class="uk-overlay uk-position-top-right uk-width-1-3">
           <div class="uk-card uk-card-default uk-card-body" id="wordsAPI">
             <!-- content goes here WORD OF THE DAY GOES HERE -->
@@ -51,11 +53,18 @@
 
         <div class="uk-overlay uk-position-center-right uk-width-1-3">
           <div class="uk-card uk-card-default uk-card-body">
+            <div class="w3-content w3-section">
+              <h3>Morning Stretch</h3>
             <!-- content goes here -->
-            <h3 class="uk-card-title">Exercise of the Day Inspiration</h3>
-            <p> Chocolate cake cookie sugar plum biscuit danish cotton candy icing soufflé pastry. Delete this filler when you have content to inject</p>
+          <iframe class="mySlides" src="https://giphy.com/embed/374lMd6uFRv5C" width="400" height="250" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yoga-374lMd6uFRv5C"></a></p>
+          <iframe class="mySlides" src="https://giphy.com/embed/tLdUZKLDEPXu8" width="400" height="270" frameBorder="0"  allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
+          <iframe class="mySlides" src="https://giphy.com/embed/GrhK7BbPFteOA" width="400" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
+          <iframe class="mySlides" src="https://giphy.com/embed/YeQfzfDgcagNO" width="400" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/exercise-fitness-YeQfzfDgcagNO"></a></p>
+          <iframe class="mySlides" src="https://giphy.com/embed/lyvxPsyKMYk3m" width="400" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
+          <iframe class="mySlides" src="./assets/my_video.gif" width="400" height="270" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
           </div>
         </div>
+      </div>
 
         <div class="uk-overlay uk-position-bottom-right uk-width-1-3">
           <div class="uk-card uk-card-default uk-card-body">
@@ -68,35 +77,18 @@
         <div class="uk-overlay uk-position-center-left uk-width-1-3">
           <div class="uk-card uk-card-default uk-card-body">
             <!-- content goes here -->
-            <h3 class="uk-card-title">Checklist of the Day Form</h3>
-              <form>
-                <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: user"></span>
-                      <input class="uk-input" placeholder="username" type="text">
-                  </div>
-                </div>
-                <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                    <input class="uk-input" type="text">
-                </div>
-              </div>
-            </form>
+            <h3 class="uk-card-title">Checklist of the Day To-Do</h3>
+            <!-- <h1>Plain JavaScript To-Do List</h1>
+            <h2>Quick and Dirty</h2> -->
+            <div class="container">
+              <form  action="#">
+                <input type="text" name="item" id="item" placeholder="Add New" />
+            </form>  
+            <ul id="list"></ul>
+            </div>
           </div>
         </div>
-      </li>
-        <li>
-            <!-- <img src="./assets/images/bled.jpg" alt="" uk-cover> -->
-        </li>
-        <li>
-            <!-- <img src="./assets/images/plitvice.jpg" alt="" uk-cover> -->
-        </li>
-    </ul>
-    <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-  </div>
-
+ 
   </div> <!-- this closes the wrapper div -->
 
   <script
