@@ -6,11 +6,14 @@
     <title>Morning Method Project 1</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <!-- UIkit CSS -->
+    <!-- UIkit CSS cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/css/uikit.min.css" />
   </head>
-  <body class="wrapper">
-  <nav class="uk-navbar-container uk-margin" uk-navbar>
+
+  <body>
+  <div class="wrapper"> <!-- largest div, holds background image API -->
+
+  <nav class="uk-navbar-container uk-margin" uk-navbar> <!-- start of navigation bar -->
     <div class="uk-navbar-left">
       <a class="uk-navbar-item uk-logo" href="#">{Morning Method}</a>
       <ul class="uk-navbar-nav">
@@ -31,9 +34,8 @@
         </ul>
       </div></div>
     </div>
-  </nav>
-    <!-- <div><h1 class="uk-heading-bullet">{Morning Method}</h1></div> -->
-    <div id="exp">
+  </nav> <!-- closes navbar -->
+
   <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade">
     <ul class="uk-slideshow-items">
       <li>
@@ -93,7 +95,8 @@
     <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
     <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
   </div>
-  </div>
+
+  </div> <!-- this closes the wrapper div -->
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
