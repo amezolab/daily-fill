@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+//weather functionality
+ !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
   // start of the Oxford dictionary API code:
   var word = "swim"
   jQuery.ajaxPrefilter(function(options) {
@@ -23,10 +24,14 @@ $(document).ready(function() {
 };
 
 $.ajax(settings).done(function (response) {
-  console.log(response.results[0].id)
-  console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+  // console.log(response.results[0].id)
+  // console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+  var wordOfDay = $("#word-of-day");
+  var wordOfDayDescrip = $("#word-of-day-descrip");
 
-  // insert DOM manipulation with jquery to spit on the page
+  wordOfDay.html(response.results[0].id);
+  console.log(wordOfDay);
+  wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
 });
 
 (function(){
@@ -74,21 +79,43 @@ $.ajax(settings).done(function (response) {
 var now = new Date().toLocaleDateString();
 $("#date").html(now);
 
-
 var myIndex = 0;
-        carousel();
 
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 9000);
-        }
+console.log(document.querySelector("#meme"));
+
+var carouselsObject = {
+  carousels: [],
+  addCarousel: function(cssID){
+    this.carousels.push({
+      id: cssID,
+      currentIndex: 0,
+      carouselLength: document.querySelectorAll("#" + cssID + " .mySlides"),
+    })
+  },
+  play: function() {
+    for (var i = 0; i < this.carousels.length; i++) {
+      this.carousels[i].currentIndex++;
+      if(this.carousels[i].currentIndex >= this.carousels[i].carouselLength){
+        this.carousels[i] = 0;
+      }
+      var slides = document.querySelectorAll("#" + this.carousels[i].id + " .mySlides");
+      console.log(slides);
+      for (var i2 = 0; i2 < slides.length; i2++){
+        if(i2 == this.carousels[i].currentIndex){
+          slides[i2].style.display = "block";
+        }else {
+          slides[i2].style.display = "none";
+        };
+      };   
+    };
+    setTimeout(carouselsObject.play.bind(this), 9000);
+  },
+};
+
+carouselsObject.addCarousel("workouts");
+carouselsObject.addCarousel("meme");
+carouselsObject.play();
+
 // start of the Unsplash API code:
 var queryUrl = "https://api.unsplash.com/photos/?client_id=64a65912239f66f48cefb32dcc6b2f453cb84943b46d69b79dc8a1df4f257016";
 
@@ -115,7 +142,6 @@ var images = [];
   var chosenImage = images[Math.floor(Math.random() * images.length)];
   console.log(chosenImage);
   $('.wrapper').css('background-image', 'url("' + chosenImage + '")');
-  // $(".wrapper").attr( "background-url", url(chosenImage) );
   $(document).click(function(){
     // $("#exp").attr("background-url", chosenImage);
     });
