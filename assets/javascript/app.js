@@ -24,10 +24,15 @@ $(document).ready(function() {
 };
 
 $.ajax(settings).done(function (response) {
+  var wordOfDay = $("#word-of-day")
+  var wordOfDayDescrip = $("#word-of-day-descrip")
+
+  wordOfDay.html(response.results[0].id)
+  console.log(wordOfDay);
+  wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0])
   // console.log(response.results[0].id)
+  // //gives definitiion
   // console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
-  var wordOfDay = $("#word-of-day");
-  var wordOfDayDescrip = $("#word-of-day-descrip");
 
   wordOfDay.html(response.results[0].id);
   console.log(wordOfDay);
