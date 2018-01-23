@@ -12,6 +12,9 @@ h3{
   background-size: cover;
   height: 980px;
 }
+.cards_wrapper{
+  /*cards need to be pushed down from the top of the window*/
+}
 .uk-heading-bullet{
   color: grey;
   text-align:right;
@@ -84,7 +87,12 @@ ul {
     }
   } 
 }
-.mySlides {display:none;}
+.padding{
+  margin: 25px;
+}
+.mySlides {display:none;
+  max-height: 300px;
+}
         . {display:none;}
 
 .checked {
