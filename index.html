@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- UIkit CSS cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   </head>
   <body>
   <div class="wrapper"> <!-- largest div, holds background image API -->
-  <nav class="uk-navbar-container uk-margin" uk-navbar> <!-- start of navigation bar -->
-    <div class="uk-navbar-left">
+  <nav id="navstyle" class="uk-navbar-container uk-margin" uk-navbar> <!-- start of navigation bar -->
+    <div class="uk-navbar-center">
       <a class="uk-navbar-item uk-logo" href="#">{Morning Method}</a>
       <ul class="uk-navbar-nav">
         <li>
@@ -42,17 +43,17 @@
     <div class="uk-overlay uk-position-bottom-left uk-width-1-3">
       <div class="uk-card uk-card-default uk-card-body" id="wordsAPI">
         <!-- words API content goes here -->
-        <h3 class="uk-card-title">Word of the Day API</h3>
+        <h3 class="uk-card-title">{morning.word}</h3>
         <h2 id="word-of-day"></h2>
         <p id="word-of-day-descrip"></p>
       </div>
     </div>
     <br class="padding">
-        
-      <div class="uk-overlay uk-position-top-right uk-width-1-3">
+
+      <div class="uk-overlay uk-position-center-right uk-width-1-3">
         <div class="uk-card uk-card-default uk-card-body">
           <div id="workouts">
-              <h3>Morning Workouts</h3>
+              <h3>{morning.workouts}</h3>
           <img class="mySlides" src="./assets/images/gif1.gif" width="400" height="250" frameBorder="0" allowFullScreen></img><p><a href=""></a></p>
           <img class="mySlides" src="./assets/images/gif2.gif" width="400" height="270" frameBorder="0"  allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
           <img class="mySlides" src="./assets/images/gif3.gif" width="400" height="270" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
@@ -66,14 +67,14 @@
       <div class="uk-overlay uk-position-bottom-right uk-width-1-3">
         <div class="uk-card uk-card-default uk-card-body" id="meme" style="max-height:350px">
           <!-- content goes here -->
-          <h3 class="uk-card-title">Morning Meme</h3>
+          <h3 class="uk-card-title">{morning.meme}</h3>
           <!-- <div class="w3-content w3-section" style="max-width:500px"> -->
           <img class="mySlides" src="./assets/images/one.jpg">
           <img class="mySlides" src="./assets/images/two.jpg">
-          <img class="mySlides" src="./assets/images/three.jpg">
+          <!-- <img class="mySlides" src="./assets/images/three.jpg"> -->
           <img class="mySlides" src="./assets/images/four.jpg">
-          <img class="mySlides" src="./assets/images/five.jpg">
-          <img class="mySlides" src="./assets/images/six.jpg">
+          <!-- <img class="mySlides" src="./assets/images/five.jpg">
+          <img class="mySlides" src="./assets/images/six.jpg"> -->
           <img class="mySlides" src="./assets/images/seven.jpg">
           <img class="mySlides" src="./assets/images/eight.jpg">
           <img class="mySlides" src="./assets/images/nine.jpg">
@@ -81,13 +82,13 @@
         </div>
       </div>
 
-      <div class="uk-overlay uk-position-top-left uk-width-1-3">
+      <div class="uk-overlay uk-position-center-left uk-width-1-3">
         <div class="uk-card uk-card-default uk-card-body">
-          <h3 class="uk-card-title">Checklist of the Day To-Do</h3>
+          <h3 class="uk-card-title">{morning.checklist}</h3>
           <div class="container">
             <form  action="#">
               <input type="text" name="item" id="item" placeholder="Add New" />
-          </form>  
+          </form>
           <ul id="list"></ul>
           </div>
         </div>

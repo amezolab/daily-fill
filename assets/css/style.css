@@ -1,8 +1,17 @@
-@font-face { font-family: "Fish"; src: url('./chips.ttf'); } 
 
-h3{
-  font-family: "Fish";
+.cards_wrapper h3 {
+  font-family: 'Special Elite', cursive;
 }
+#workouts {
+  margin-top: 50px;
+}
+
+#navstyle {
+background-color: lemonchiffon;
+/* margin-left: none;
+margin-right: none;  */
+}
+
 .uk-card {
   margin-right: 15px;
 }
@@ -21,8 +30,12 @@ h3{
   padding-bottom: 25px;
 }
 
+.myslides {
+  padding-top: 20px;
+}
+
 #exp{
-  -background-image: no-repeat center center fixed; 
+  -background-image: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,7 +98,7 @@ ul {
     &:last-child {
       border-bottom: none;
     }
-  } 
+  }
 }
 .padding{
   margin: 25px;
@@ -111,4 +124,3 @@ ul {
       }
     }
 }
-
