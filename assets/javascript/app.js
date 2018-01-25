@@ -40,18 +40,18 @@ $.ajax(settings).done(function (response) {
 });
 
 (function(){
-  
+
   var list = document.querySelector('#list'),
       form = document.querySelector('form'),
       item = document.querySelector('#item');
-  
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
     list.innerHTML += '<li>' + item.value + '</li>';
     store();
     item.value = "";
   },false)
-  
+
   list.addEventListener('click',function(e){
     var t = e.target;
     if(t.classList.contains('checked')){
@@ -61,11 +61,11 @@ $.ajax(settings).done(function (response) {
     }
     store();
   },false)
-  
+
   function store() {
     window.localStorage.myitems = list.innerHTML;
   }
-  
+
   function getValues() {
     var storedValues = window.localStorage.myitems;
     if(!storedValues) {
@@ -100,10 +100,11 @@ var carouselsObject = {
   play: function() {
     for (var i = 0; i < this.carousels.length; i++) {
       this.carousels[i].currentIndex++;
-      if(this.carousels[i].currentIndex >= this.carousels[i].carouselLength){
-        this.carousels[i] = 0;
-      }
       var slides = document.querySelectorAll("#" + this.carousels[i].id + " .mySlides");
+      if(this.carousels[i].currentIndex >= slides.length){
+        this.carousels[i].currentIndex = 0;
+      }
+
       console.log(slides);
       for (var i2 = 0; i2 < slides.length; i2++){
         if(i2 == this.carousels[i].currentIndex){
@@ -111,7 +112,7 @@ var carouselsObject = {
         }else {
           slides[i2].style.display = "none";
         };
-      };   
+      };
     };
     setTimeout(carouselsObject.play.bind(this), 9000);
   },

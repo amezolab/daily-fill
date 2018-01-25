@@ -1,10 +1,64 @@
-@font-face { font-family: "Fish"; src: url('./chips.ttf'); } 
-
-h3{
-  font-family: "Fish";
+.uk-card-default {
+  background-color: lemonchiffon;
 }
+
+.uk-card uk-card-default uk-card-body {
+  background-color: lemonchiffon;
+}
+
+#footer {
+  margin: auto;
+  background-color: lemonchiffon;
+  height: 75px;
+  padding-top: 30px;
+  padding-left: 15px;
+  color: rgb(32, 85, 123);
+  text-align: center;
+}
+
+#checklist{
+  margin-top: 50px;
+}
+
+#navstyle {
+  height: 100px;
+}
+
+#memediv {
+  margin-top: 700px;
+
+}
+#logo {
+  height: 200px;
+  width: 400px;
+}
+#workoutdiv {
+  margin-top: 75px;
+  margin-bottom: 20px;
+  }
+
+  .headers {
+  color: rgb(32, 85, 123);
+  font-family: 'Special Elite', cursive;
+  background-color: lemonchiffon;
+  text-align: center;
+
+}
+
+
+#workouts {
+  margin-top: 50px;
+}
+
+#navstyle {
+background-color: lemonchiffon;
+/* margin-left: none;
+margin-right: none;  */
+}
+
 .uk-card {
   margin-right: 15px;
+  background-color: lemonchiffon;
 }
 .wrapper {
   /*background: url("../images/bled.jpg");*/
@@ -12,25 +66,27 @@ h3{
   background-size: cover;
   height: 980px;
 }
-.cards_wrapper{
-  /*cards need to be pushed down from the top of the window*/
-}
+
 .uk-heading-bullet{
-  color: grey;
+color: rgb(32, 85, 123);
   text-align:right;
   padding-bottom: 25px;
 }
 
+.myslides {
+  padding-top: 20px;
+}
+
 #exp{
-  -background-image: no-repeat center center fixed; 
+  -background-image: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 };
 body {
-  background: #eee;
-  color: #444;
+  /* background: #eee;
+  color: #444; */
   font-family: 'Helvetica', arial, sans-serif;
 }
 
@@ -85,7 +141,7 @@ ul {
     &:last-child {
       border-bottom: none;
     }
-  } 
+  }
 }
 .padding{
   margin: 25px;
@@ -111,4 +167,3 @@ ul {
       }
     }
 }
-
