@@ -24,8 +24,21 @@
   height: 100px;
 }
 
+.uk-position-top-right{
+  margin-top: 200px;
+}
+
+.uk-position-top-left{
+  /*margin-bottom: 200px;*/
+}
+.uk-position-bottom-right{
+  margin-top: 200px;
+}
+
+.uk-position
+
 #memediv {
-  margin-top: 700px;
+  /*margin-top: 700px;*/
 
 }
 #logo {
@@ -33,21 +46,19 @@
   width: 400px;
 }
 #workoutdiv {
-  margin-top: 75px;
-  margin-bottom: 20px;
+/*  margin-top: 75px;
+  margin-bottom: 20px;*/
   }
 
-  .headers {
-  color: rgb(32, 85, 123);
-  font-family: 'Special Elite', cursive;
-  background-color: lemonchiffon;
-  text-align: center;
-
+.headers {
+color: rgb(32, 85, 123);
+font-family: 'Special Elite', cursive;
+background-color: lemonchiffon;
+text-align: center;
 }
 
-
 #workouts {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 
 #navstyle {
@@ -61,10 +72,9 @@ margin-right: none;  */
   background-color: lemonchiffon;
 }
 .wrapper {
-  /*background: url("../images/bled.jpg");*/
   background-repeat: no-repeat;
   background-size: cover;
-  height: 980px;
+  height: 1500px;
 }
 
 .uk-heading-bullet{
@@ -143,8 +153,10 @@ ul {
     }
   }
 }
+
+/*uk-position-top-right*/
 .padding{
-  margin: 25px;
+  /*margin: 25px;*/
 }
 .mySlides {display:none;
   max-height: 300px;
