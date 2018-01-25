@@ -19,7 +19,7 @@ window.onload = function() {
 //weather functionality
  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
   // start of the Oxford dictionary API code:
-  var word = "swim"
+  var word = "xylitol"
   jQuery.ajaxPrefilter(function(options) {
     if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
@@ -47,9 +47,6 @@ $.ajax(settings).done(function (response) {
   wordOfDay.html(response.results[0].id)
   console.log(wordOfDay);
   wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0])
-  // console.log(response.results[0].id)
-  // //gives definitiion
-  // console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
 
   wordOfDay.html(response.results[0].id);
   console.log(wordOfDay);
@@ -88,7 +85,8 @@ $.ajax(settings).done(function (response) {
     if(!storedValues) {
       list.innerHTML = '<li>Make a to do list</li>'+
                        '<li>Check off first thing on the to do list</li>'+
-                       '<li>Realize you have already accomplished 2 things in the list</li>'+
+                       '<li>Make sure to hug your lemur</li>' +
+                       '<li>Yay you have accomplished 2 things</li>'+
                        '<li>Reward yourself with a nap</li>';
     }
     else {
@@ -97,6 +95,7 @@ $.ajax(settings).done(function (response) {
   }
   getValues();
 })();
+
 
 var now = new Date().toLocaleDateString();
 $("#date").html(now);

@@ -1,9 +1,13 @@
 .uk-card-default {
   background-color: lemonchiffon;
+  opacity: 0.9;
 }
 
 .uk-card uk-card-default uk-card-body {
   background-color: lemonchiffon;
+}
+.uk-card uk-card-default uk-card-body::hover{
+  opacity: 1;
 }
 
 #footer {
@@ -17,7 +21,16 @@
 }
 
 #checklist{
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+}
+
+.checklist-container{
+  padding-left: 35px;
+  text-align:left;
+}
+ul#list {
+  list-style-type: square;
+  padding-left: 20px;
 }
 
 #navstyle {
@@ -58,6 +71,7 @@ text-align: center;
 }
 
 #workouts {
+  /*padding-left: 20px;*/
   /*margin-top: 50px;*/
 }
 
@@ -83,8 +97,12 @@ color: rgb(32, 85, 123);
   padding-bottom: 25px;
 }
 
-.myslides {
-  padding-top: 20px;
+.mySlides {
+  /*padding-left: 50px;*/
+  /*padding-top: 20px;*/
+}
+#map {
+  margin-left: 35px;
 }
 
 #exp{
