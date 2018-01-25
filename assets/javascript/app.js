@@ -1,4 +1,21 @@
 $(document).ready(function() {
+
+window.onload = function() {
+        L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+
+        var map = L.mapquest.map('map', {
+          center: [39.680532, -104.964890],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 10
+        });
+
+        map.addLayer(L.mapquest.trafficLayer());
+        map.addLayer(L.mapquest.incidentsLayer());
+        map.addLayer(L.mapquest.marketsLayer());
+      };
+
+
+
 //weather functionality
  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
   // start of the Oxford dictionary API code:

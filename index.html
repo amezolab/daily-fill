@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Morning Method Project 1</title>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.2.0/mapquest.css"/>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- UIkit CSS cdn -->
@@ -29,61 +30,17 @@
       </div>
       <div class="uk-navbar-right"><div>
         <ul class="uk-navbar-nav">
-            <!-- <li><a href="#">Contact</a></li>
-            <li><a href="#">More Info</a></li> -->
         </ul>
       </div></div>
     </div>
   </nav> <!-- closes navbar -->
-
-  <!-- weather widget -->
+  <!-- start weather widget -->
   <div>
     <a class="weatherwidget-io" href="https://forecast7.com/en/39d74n104d99/denver/" data-label_1="DENVER" data-label_2="WEATHER" data-theme="original" >DENVER WEATHER</a>
-  </div>
+  </div> <!-- end weather widget -->
+
   <div class="cards_wrapper">
-    <div class="uk-overlay uk-position-bottom-left uk-width-1-3">
-      <div class="uk-card uk-card-default uk-card-body" id="wordsAPI">
-        <!-- words API content goes here -->
-        <h3 class="headers">{morning.word}</h3>
-        <h2 id="word-of-day"></h2>
-        <p id="word-of-day-descrip"></p>
-      </div>
-    </div>
-    <br class="padding">
-
-      <div id="workoutdiv" class="uk-overlay uk-position-top-right uk-width-1-3" style="margin-top: 200px;">
-        <div class="uk-card uk-card-default uk-card-body">
-          <div id="workouts">
-              <h3 class="headers">{morning.workout}</h3>
-          <img class="mySlides" src="./assets/images/gif1.gif" width="400" height="250" frameBorder="0" allowFullScreen></img><p><a href=""></a></p>
-          <img class="mySlides" src="./assets/images/gif2.gif" width="400" height="270" frameBorder="0"  allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
-          <img class="mySlides" src="./assets/images/gif3.gif" width="400" height="270" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
-          <img class="mySlides" src="./assets/images/gif4.gif" width="400" height="270" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-YeQfzfDgcagNO"></a></p>
-          <img class="mySlides" src="./assets/images/gif5.gif" width="400" height="270" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
-          </div>
-        </div>
-      </div>
-      <br class="padding">
-
-      <div id="memediv" class="uk-overlay uk-position-bottom-right uk-width-1-3" style="clear:both;">
-        <div class="uk-card uk-card-default uk-card-body" id="meme" style="max-height:350px">
-          <!-- content goes here -->
-          <h3 class="headers">{morning.meme}</h3>
-          <!-- <div class="w3-content w3-section" style="max-width:500px"> -->
-          <img class="mySlides" src="./assets/images/one.jpg">
-          <img class="mySlides" src="./assets/images/two.jpg">
-          <!-- <img class="mySlides" src="./assets/images/three.jpg"> -->
-          <img class="mySlides" src="./assets/images/four.jpg">
-          <!-- <img class="mySlides" src="./assets/images/five.jpg">
-          <img class="mySlides" src="./assets/images/six.jpg"> -->
-          <img class="mySlides" src="./assets/images/seven.jpg">
-          <img class="mySlides" src="./assets/images/eight.jpg">
-          <img class="mySlides" src="./assets/images/nine.jpg">
-          <img class="mySlides" src="./assets/images/ten.png">
-        </div>
-      </div>
-
-      <div id="checklist" contenteditable=""class="uk-overlay uk-position-top-left uk-width-1-3" style="margin-top: 200px;">
+    <div id="checklist" class="uk-child-width-expand@s uk-text-center" style="" uk-grid>
         <div class="uk-card uk-card-default uk-card-body">
           <h3 class="headers">{morning.checklist}</h3>
           <div class="container">
@@ -93,21 +50,72 @@
           <ul id="list"></ul>
           </div>
         </div>
-      </div>
-    </div> <!-- this closes the cards wrapper div -->
-  </div> <!-- this closes the wrapper div -->
-  <footer class="blue red" id="footer">morning.method-copyright 2018</footer>
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./assets/javascript/app.js"></script>
-  <!-- UIkit JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit-icons.min.js"></script>
-  </script>
-  </body>
+        <div class="uk-card uk-card-default uk-card-body">
+          <div id="workouts">
+              <h3 class="headers">{morning.workout}</h3>
+          <img class="mySlides" src="./assets/images/gif1.gif" width="400" height="200" frameBorder="0" allowFullScreen></img><p><a href=""></a></p>
+          <img class="mySlides" src="./assets/images/gif2.gif" width="400" height="200" frameBorder="0"  allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
+          <img class="mySlides" src="./assets/images/gif3.gif" width="400" height="200" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
+          <img class="mySlides" src="./assets/images/gif4.gif" width="400" height="200" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-YeQfzfDgcagNO"></a></p>
+          <img class="mySlides" src="./assets/images/gif5.gif" width="400" height="200" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
+          </div>
+        </div>
+     
+      <div class="uk-card uk-card-default uk-card-body" id="meme" style="">
+          <!-- content goes here -->
+        <h3 class="headers">{morning.meme}</h3>
+        <!-- <div class="w3-content w3-section" style="max-width:500px"> -->
+        <img class="mySlides" src="./assets/images/one.jpg">
+        <img class="mySlides" src="./assets/images/two.jpg">
+        <!-- <img class="mySlides" src="./assets/images/three.jpg"> -->
+        <img class="mySlides" src="./assets/images/four.jpg">
+        <!-- <img class="mySlides" src="./assets/images/five.jpg">
+        <img class="mySlides" src="./assets/images/six.jpg"> -->
+        <img class="mySlides" src="./assets/images/seven.jpg">
+        <img class="mySlides" src="./assets/images/eight.jpg">
+        <img class="mySlides" src="./assets/images/nine.jpg">
+        <img class="mySlides" src="./assets/images/ten.png">
+      </div>
+    </div> <!-- closes the first uk grid row -->
+
+    <div id="checklist" class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="headers">{morning.traffic}</h3>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <!-- <div class="container">
+          <form  action="#">
+            <input type="text" name="item" id="item" placeholder="Add New" />
+        </form>
+        <ul id="list"></ul>
+        </div> -->
+      </div>
+
+      <div class="uk-card uk-card-default uk-card-body" id="wordsAPI">
+        <!-- words API content goes here -->
+        <h3 class="headers">{morning.word}</h3>
+        <h2 id="word-of-day"></h2>
+        <p id="word-of-day-descrip"></p>
+      </div>
+    </div> <!-- closes the second row -->
+    </div> <!-- //wraps ui grid/cards wrapper -->
+  </div> <!-- this closes the cards wrapper div -->
+</div> <!-- this closes the wrapper div -->
+
+<footer class="blue red" id="footer">morning.method-copyright 2018</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./assets/javascript/app.js"></script>
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit-icons.min.js"></script>
+<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.2.0/mapquest.js"></script>
+
+</script>
+</body>
 </html>
