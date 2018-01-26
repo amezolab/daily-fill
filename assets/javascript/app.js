@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
 
 window.onload = function() {
-        L.mapquest.key = config.key
+        L.mapquest.key = 'v97OoOgR46iLULAXZTn2SpxoOCveRf0p'
 
         var map = L.mapquest.map('map', {
           center: [39.680532, -104.964890],
