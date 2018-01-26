@@ -51,6 +51,7 @@ $.ajax(settings).done(function (response) {
   wordOfDay.html(response.results[0].id);
   console.log(wordOfDay);
   wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+
 });
 
 (function(){
@@ -99,6 +100,11 @@ $.ajax(settings).done(function (response) {
 
 var now = new Date().toLocaleDateString();
 $("#date").html(now);
+
+var time = (moment().format("hh:mm A"));
+$("#time").html(time);
+
+console.log(time);
 
 var myIndex = 0;
 
@@ -153,19 +159,25 @@ var images = [];
       images.push(response[i].urls.full);
     };
     console.log(images);
+
     var imageIndex = -1;
     var myTimer = setInterval(function(){
       if(imageIndex == images.length -2){
         imageIndex = -1;
       }
       imageIndex++;
-      console.log(images[imageIndex]);
-    }, 5000);
+    $(".wrapper").css('background-image', 'url("' + chosenImage + '")');
+    }, 9000);
+
   var chosenImage = images[Math.floor(Math.random() * images.length)];
-  console.log(chosenImage);
+  var secondImage = images[8];
+  var thirdImage = images[5];
   $('.wrapper').css('background-image', 'url("' + chosenImage + '")');
+
   $(document).click(function(){
-    // $("#exp").attr("background-url", chosenImage);
+    $(".wrapper").css('background-image', 'url("' + secondImage + '")');
+    $(".wrapper").css('background-image', 'url("' + thirdImage + '")');
+
     });
   });
 });

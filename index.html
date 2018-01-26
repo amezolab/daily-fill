@@ -18,6 +18,7 @@
   <div class="wrapper"> <!-- largest div, holds background image API -->
   <nav id="navstyle" class="uk-navbar-container uk-margin" uk-navbar> <!-- start of navigation bar -->
     <div class="uk-navbar-center">
+      <a href="#" id="time"></a>
       <a class="uk-navbar-item uk-logo" href="#"><img id="logo" src="assets/images/logo.png"/></a>
       <ul class="uk-navbar-nav">
         <li>
@@ -56,6 +57,7 @@
         <div class="uk-card uk-card-default uk-card-body">
           <div id="workouts">
             <h3 class="headers">{morning.workout}</h3>
+          <img class="mySlides" src="./assets/images/my_video.gif" width="475" height="200" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/home-video-exercise-lyvxPsyKMYk3m"></a></p>
           <img class="mySlides" src="./assets/images/gif1.gif" width="475" height="200" frameBorder="0" allowFullScreen></img><p><a href=""></a></p>
           <img class="mySlides" src="./assets/images/gif2.gif" width="475" height="200" frameBorder="0"  allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-tLdUZKLDEPXu8"></a></p>
           <img class="mySlides" src="./assets/images/gif3.gif" width="475" height="200" frameBorder="0" allowFullScreen></img><p><a href="https://giphy.com/gifs/exercise-fitness-GrhK7BbPFteOA"></a></p>
@@ -69,7 +71,7 @@
         <h3 class="headers">{morning.meme}</h3>
         <img class="mySlides" src="./assets/images/one.jpg">
         <img class="mySlides" src="./assets/images/two.jpg">
-        <img class="mySlides" src="./assets/images/four.jpg">
+        <!-- <img class="mySlides" src="./assets/images/four.jpg"> -->
         <img class="mySlides" src="./assets/images/seven.jpg">
         <img class="mySlides" src="./assets/images/eight.jpg">
         <img class="mySlides" src="./assets/images/nine.jpg">
@@ -77,7 +79,7 @@
       </div>
     </div> <!-- closes the first uk grid row -->
 
-    <div id="" class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div id="checklist" class="uk-child-width-expand@s uk-text-center" uk-grid>
       <div class="uk-card uk-card-default uk-card-body">
         <h3 class="headers">{morning.traffic}</h3>
         <div id="map" style="height: 300px;"></div>
@@ -96,11 +98,13 @@
       </div>
     </div> <!-- closes the second row -->
 
+    <div class="bottom_image uk-overlay"></div>
+
     </div> <!-- //wraps ui grid/cards wrapper -->
   </div> <!-- this closes the wrapper div -->
 <!-- </div> this closes the wrapper div -->
 
-<footer class="blue red" id="footer">morning.method-copyright 2018</footer>
+<footer class="blue red" id="footer">{morning.method   &copy; 2018}</footer>
 
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -112,6 +116,7 @@
 <!-- UIkit JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit-icons.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.2.0/mapquest.js"></script>
 
 </script>
