@@ -23,8 +23,17 @@ window.onload = function() {
 //weather functionality
  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
   // start of the Oxford dictionary API code:
-  var word = "xylitol"
-  
+  // var word = "xylitol"
+  // var words = ["alacrity", "arcane", "candor", "embezzle", "haughty"];
+
+  // var word = function (words) {
+  //  words[Math.floor(Math.random() * words.length)];
+  // };
+
+// document.getElementById("word").textContent = word;
+var words = ["alacrity","avarice", "despot", "erudite", "gratuitous", "haughty", "intrepid", "schadenfreude"];
+var word = words[Math.floor(Math.random() * words.length)];
+
   var query = "https://od-api.oxforddictionaries.com/api/v1";
   var settings = {
   "async": true,
@@ -41,6 +50,8 @@ window.onload = function() {
 };
 
 $.ajax(settings).done(function (response) {
+  console.log(word);
+
   var wordOfDay = $("#word-of-day")
   var wordOfDayDescrip = $("#word-of-day-descrip")
 
@@ -48,9 +59,9 @@ $.ajax(settings).done(function (response) {
   console.log(wordOfDay);
   wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0])
 
-  wordOfDay.html(response.results[0].id);
-  console.log(wordOfDay);
-  wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+  // wordOfDay.html(response.results[0].id);
+  // console.log(wordOfDay);
+  // wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
 
 });
 

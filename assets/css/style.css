@@ -182,3 +182,8 @@ ul {
   background-size: cover;
   height: auto;
 }
+
+#dictionary{
+  height: 160px;
+  width: 220px;
+}
