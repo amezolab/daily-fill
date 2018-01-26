@@ -1,7 +1,13 @@
 $(document).ready(function() {
 
+  jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    };
+  });
+
 window.onload = function() {
-        L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+        L.mapquest.key = config.key
 
         var map = L.mapquest.map('map', {
           center: [39.680532, -104.964890],
@@ -10,21 +16,15 @@ window.onload = function() {
         });
 
         map.addLayer(L.mapquest.trafficLayer());
-        map.addLayer(L.mapquest.incidentsLayer());
+        // map.addLayer(L.mapquest.incidentsLayer());
         map.addLayer(L.mapquest.marketsLayer());
       };
-
-
 
 //weather functionality
  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
   // start of the Oxford dictionary API code:
   var word = "xylitol"
-  jQuery.ajaxPrefilter(function(options) {
-    if (options.crossDomain && jQuery.support.cors) {
-        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-    };
-  });
+  
   var query = "https://od-api.oxforddictionaries.com/api/v1";
   var settings = {
   "async": true,
