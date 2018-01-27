@@ -91,11 +91,7 @@ color: rgb(32, 85, 123);
 }
 
 #exp{
-  -background-image: no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
 };
 body {
   font-family: 'Helvetica', arial, sans-serif;
@@ -178,9 +174,14 @@ ul {
 }
 
 .wrapper {
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
   height: auto;
+  -background-image: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #dictionary{
