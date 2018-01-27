@@ -1,36 +1,29 @@
 $(document).ready(function() {
 
+//CORS issues:
   jQuery.ajaxPrefilter(function(options) {
     if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     };
   });
 
+//Traffic card:
 window.onload = function() {
-        L.mapquest.key = "v97OoOgR46iLULAXZTn2SpxoOCveRf0p";
+  L.mapquest.key = "v97OoOgR46iLULAXZTn2SpxoOCveRf0p";
 
-        var map = L.mapquest.map('map', {
-          center: [39.680532, -104.964890],
-          layers: L.mapquest.tileLayer('map'),
-          zoom: 10
-        });
+  var map = L.mapquest.map('map', {
+    center: [39.680532, -104.964890],
+    layers: L.mapquest.tileLayer('map'),
+    zoom: 10
+  });
 
-        map.addLayer(L.mapquest.trafficLayer());
-        // map.addLayer(L.mapquest.incidentsLayer());
-        // map.addLayer(L.mapquest.marketsLayer());
-      };
+  map.addLayer(L.mapquest.trafficLayer());
+  };
 
-//weather functionality
+//Weather functionality
  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
-  // start of the Oxford dictionary API code:
-  // var word = "xylitol"
-  // var words = ["alacrity", "arcane", "candor", "embezzle", "haughty"];
 
-  // var word = function (words) {
-  //  words[Math.floor(Math.random() * words.length)];
-  // };
-
-// document.getElementById("word").textContent = word;
+// start of the Oxford dictionary API code:
 var words = ["alacrity","avarice", "despot", "erudite", "gratuitous", "haughty", "intrepid", "schadenfreude"];
 var word = words[Math.floor(Math.random() * words.length)];
 
@@ -59,12 +52,9 @@ $.ajax(settings).done(function (response) {
   console.log(wordOfDay);
   wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0])
 
-  // wordOfDay.html(response.results[0].id);
-  // console.log(wordOfDay);
-  // wordOfDayDescrip.html(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
-
 });
 
+//To-Do list:
 (function(){
 
   var list = document.querySelector('#list'),
@@ -108,15 +98,15 @@ $.ajax(settings).done(function (response) {
   getValues();
 })();
 
-
+//time & date:
 var now = new Date().toLocaleDateString();
 $("#date").html(now);
 
 var time = (moment().format("hh:mm A"));
 $("#time").html(time);
-
 console.log(time);
 
+//Meme card:
 var myIndex = 0;
 
 console.log(document.querySelector("#meme"));
@@ -155,7 +145,7 @@ carouselsObject.addCarousel("workouts");
 carouselsObject.addCarousel("meme");
 carouselsObject.play();
 
-// start of the Unsplash API code:
+//Unsplash API code:
 var queryUrl = "https://api.unsplash.com/photos/?client_id=64a65912239f66f48cefb32dcc6b2f453cb84943b46d69b79dc8a1df4f257016";
 
 var images = [];
@@ -164,31 +154,21 @@ var images = [];
   method: 'GET',
   }).done(function(response){
     console.log(response);
-    // console.log(response[0].likes);
     for (var i = response.length - 1; i >= 0; i--) {
       console.log(response[i]);
       images.push(response[i].urls.full);
     };
     console.log(images);
-
     var imageIndex = -1;
+
     var myTimer = setInterval(function(){
       if(imageIndex == images.length -2){
         imageIndex = -1;
       }
       imageIndex++;
+      var chosenImage = images[Math.floor(Math.random() * images.length)];
+
     $(".wrapper").css('background-image', 'url("' + chosenImage + '")');
-    }, 9000);
-
-  var chosenImage = images[Math.floor(Math.random() * images.length)];
-  var secondImage = images[8];
-  var thirdImage = images[5];
-  $('.wrapper').css('background-image', 'url("' + chosenImage + '")');
-
-  $(document).click(function(){
-    $(".wrapper").css('background-image', 'url("' + secondImage + '")');
-    $(".wrapper").css('background-image', 'url("' + thirdImage + '")');
-
-    });
+    }, 20000);
   });
 });
